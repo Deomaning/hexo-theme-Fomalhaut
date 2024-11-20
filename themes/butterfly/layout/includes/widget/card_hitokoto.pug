@@ -1,0 +1,22 @@
+if theme.aside.card_hitokoto.enable
+.card-widget.card-hitokoto
+    .card-content
+        .item-headline
+            svg.faa-tada.icon(style="height:25px;width:25px;fill:currentColor;position:relative;top:5px" aria-hidden="true")
+                use(xlink:href='#icon-shici')
+            span= _p('今日诗词')
+            #poem_sentence : 正在获取中...
+            i#poem_info : 正在获取中...
+            script.
+                getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
+                    jinrishici.load(result => {
+                        var sentence = document.querySelector("#poem_sentence")
+                        var info = document.querySelector("#poem_info")
+                        sentence.innerHTML = result.data.content
+                        info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+                    })
+                })
+
+                jinrishici.load(function (result) {
+
+                });
