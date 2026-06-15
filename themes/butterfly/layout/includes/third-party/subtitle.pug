@@ -24,6 +24,7 @@ case source
             }
           })
       }
+      // setInterval(subtitleType, 5000); 循环请求一言接口去刷新页面语句,但是接口本身不支持太快且会导致显示一言的页面异常抖动,所以注释掉
 
       if (!{effect}) {
         if (typeof Typed === 'function') {
@@ -104,7 +105,7 @@ case source
     - subContent = subContent.length ? subContent : new Array(config.subtitle)
     script.
       function subtitleType () {
-        if (!{effect}) { 
+        if (!{effect}) {
           window.typed = new Typed("#subtitle", {
             strings: !{JSON.stringify(subContent)},
             startDelay: 300,

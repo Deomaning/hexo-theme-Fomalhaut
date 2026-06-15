@@ -1,0 +1,36 @@
+- class_name: 游戏世界
+  description: 我的游戏世界
+  tip: 一起来探索世界吧
+  top_background: https://s2.loli.net/2024/11/27/LFTlgIpYMR6nUzH.webp
+  buttonText: Steam
+  buttonLink: https://steamcommunity.com/
+  good_games:
+    - title: 风景一绝
+      description: 不会错过的风景
+      games_list:
+        - name: 怪物猎人:世界
+          specification: CAPCOM Co., Ltd.
+          description: "在新建构的「Monster Hunter: World」中, 可以体验到你一直期盼的极致猎人生活。"
+          image: https://cdn.max-c.com/heybox/dailynews/img/94376ca41326836587a137d5999733e5.jpg
+          link: https://www.xiaoheihe.cn/games/detail/582010
+        - name: 龙珠Z:卡卡罗特
+          specification: "DRAGON BALL Z: KAKAROT"
+          description: "这是一款动作角色扮演游戏，玩家可以在开放世界中扮演孙悟空及其他Z战士，体验《龙珠Z》的经典故事。"
+          image: http://www.fdsil.com/file/upload/202411/19/215655811.png
+          link: 龙珠Z:卡卡罗特
+    - title: 我的最爱
+      description: 我不能没有它了
+      games_list:
+        - name: GTA:5
+          specification: Rockstar Games
+          description: 谁还在买GTA5
+          image: https://imgheybox.max-c.com/heybox/game/header/271590_dXCCk.jpg
+          link: https://www.xiaoheihe.cn/games/detail/271590
+    - title: 最近在玩
+      description: 找点搭子队友啊(●'◡'●)
+      games_list:
+        - name: CF(穿越火线)
+          specification: Cross Fire
+          description: 腾讯CF经典枪战游戏 (╯°□°）╯︵ ┻━┻
+          image: https://img0.baidu.com/it/u=4272998724,3511548583&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=673
+          link: cf.qq.com/main.shtml?eqid=9764fd84001dd21e00000006645794f9

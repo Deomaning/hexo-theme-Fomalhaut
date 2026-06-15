@@ -12,6 +12,17 @@ if theme.aside.card_hitokoto.enable
                     jinrishici.load(result => {
                         var sentence = document.querySelector("#poem_sentence")
                         var info = document.querySelector("#poem_info")
+                       with(sentence.style){
+                            fontSize = "18px";
+                            color = "currentColor";
+                            whiteSpace = "nowrap";
+                            fontFamily="xingshu"
+                       }
+                       with(info.style){
+                            color = "currentColor";
+                            whiteSpace = "nowrap";
+                            fontFamily="xingshu"
+                       }
                         sentence.innerHTML = result.data.content
                         info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
                     })

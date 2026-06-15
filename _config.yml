@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Fomalhaut🥝
-subtitle: 
-description: 'Future is now 🍭🍭🍭'
-keywords: 'Java,MySQL,算法,代码,博客,Butterfly,Hexo,Fomalhaut🥝,Fomalhaut'
-author: Fomalhaut🥝
+title: Anhao
+subtitle:
+description: '人无法同时拥有青春和对青春的感受😅'
+keywords: 'Java,MySQL,算法,代码,博客,前端,全栈'
+author: 安好
 language: zh-CN
 timezone: ''
 
@@ -18,7 +18,7 @@ abbrlink:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://www.fomal.cc/
+url: https://www.anhaoi.top/
 permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
@@ -34,7 +34,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 # 指定不渲染某些页面
-skip_render: 
+skip_render: /sorce/_posts/Demo
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
@@ -67,15 +67,15 @@ math:
   mathjax:
     src: custom_mathjax_source
     config:
-      # MathJax config   
-   
-  
+      # MathJax config
+
+
 # 音乐插件
-aplayer: 
+aplayer:
   meting: true
   asset_inject: false
-               
-                    
+
+
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -124,7 +124,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   - type: git
-    repository:  # 这里写上你的Github地址
+    repository: git@github.com:Deomaning/Anhao_Oi.git   # 这里写上你的Github地址
     branch: main
   # - type: baidu_url_submitter
   # - type: git
@@ -143,7 +143,7 @@ algolia:
   appId: ""
   apiKey: ""
   adminApiKey: ""
-  chunkSize: 
+  chunkSize:
   indexName: ""
   fields:
     - content:strip:truncate,0,30000
@@ -198,7 +198,7 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
-  
+
 # 主动推送百度，被百度收录
 baidu_url_submit:
   count: 10 # 提交最新的10个链接
@@ -211,7 +211,6 @@ nofollow:
   enable: false
   field: site
   exclude: ''
-
 
 # github提交日志
 # hexo-filter-gitcalendar
@@ -271,23 +270,29 @@ magnet:
   devide: 3
   display:
     - name: 算法
-      display_name: 小Fの算法学习笔记
+      display_name: 算法学习笔记
       icon: 🍡
     - name: 计算机基础
-      display_name: 小Fの计算机基础笔记
+      display_name: 计算机基础笔记
       icon: 🍼
-    - name: 魔改教程
-      display_name: 小Fの博客魔改教程
-      icon: 🍉
-    - name: Java基础
-      display_name: 小FのJava基础笔记
+    - name: Java学习
+      display_name: Java笔记
       icon: 🍟
     - name: 数据库
-      display_name: 小Fの数据库笔记
+      display_name: 数据库笔记
       icon: 🍨
-    - name: 演示
-      display_name: 小Fの案例演示笔记
+    - name: 随手笔记
+      display_name: 随手笔记
       icon: 🍥
+    - name: 吐槽
+      display_name: xxxxx
+      icon: 🦄
+    - name: 奇葩报错
+      display_name: 奇葩报错
+      icon: 🥮
+    - name: 运动
+      display_name: 健身
+      icon: 🍙
   color_setting:
     text_color: black # 文字默认颜色
     text_hover_color: white # 文字鼠标悬浮颜色

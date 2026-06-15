@@ -8,9 +8,9 @@ type: "link"
 {% tabs link %}
 <!-- tab 🙋 butterfly-💭candy -->
 ```yml
-    - name: Fomalhaut🥝
-      link: https://www.fomal.cc/
-      avatar: https://www.fomal.cc/assets/avatar.webp
+    - name: 安好
+      link: https://www.ahaoi.top/
+      avatar: https://www.ahaoi.cc/assets/avatar.webp
       descr: Future is now 🍭🍭🍭
       siteshot: https://source.fomal.cc/siteshot/www.fomal.cn.jpg
 ```
@@ -19,26 +19,26 @@ type: "link"
 <!-- tab 🥗Volantis -->
 ```JSON
 {
-  "title": "Fomalhaut🥝",
+  "title": "安好",
   "screenshot": "https://source.fomal.cc/siteshot/www.fomal.cn.jpg",
   "url": "https://www.fomal.cc/",
   "avatar": "https://www.fomal.cc/assets/avatar.webp",
-  "description": "Future is now 🍭🍭🍭",
-  "keywords": "Fomalhaut🥝"
+  "description": "人无法同时拥有青春和对青春的感受",
+  "keywords": "安好"
 }
 ```
 <!-- endtab -->
 
 <!-- tab 🌴General -->
 
-| 名称       | 数值                                                         |
-| ---------- | ------------------------------------------------------------ |
-| 站点名称   | Fomalhaut🥝                                                   |
-| 站点截图   | https://source.fomal.cc/siteshot/www.fomal.cn.jpg |
-| 站点链接   | https://www.fomal.cc/                                        |
-| 站长头像   | https://www.fomal.cc/assets/avatar.webp                         |
-| 站点描述   | Future is now🍭🍭🍭                         |
-| 站点关键词 | Fomalhaut🥝,个人博客,代码                                     |
+| 名称    | 数值                                                |
+| ----- | ------------------------------------------------- |
+| 站点名称  | 安好                                                |
+| 站点截图  | https://source.fomal.cc/siteshot/www.fomal.cn.jpg |
+| 站点链接  | https://www.fomal.cc/                             |
+| 站长头像  | https://www.fomal.cc/assets/avatar.webp           |
+| 站点描述  | Future is now🍭🍭🍭                               |
+| 站点关键词 | 个人博客,代码                                           |
 
 <!-- endtab -->
 {% endtabs %}

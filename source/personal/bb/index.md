@@ -114,5 +114,5 @@ div#bb_loading img{
 <script src="/js/bibi.js"></script>
 
 <div id="bibi">
-<div class="bb-info"></div><div id="bb-main"></div>
+<div class="bb-info"></div><div id="bb-main">小时候的风在吹过</div>
 </div>

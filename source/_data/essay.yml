@@ -1,0 +1,36 @@
+- class_name: 即刻短文
+  essay_list:
+    - content: 这个页面为什么感觉这么不协调=-=,和主题不搭的缘故吗?
+      date: 2024/11/22
+      from: 安好
+    - content: 为什么感觉记忆力好差,单词根本记不住啊
+      date: 2024/11/26
+      from: 安好
+#    - content: 终于把相册集搞定了, 耶✌️, 瀑布流在滑动滚动条一个视口范围上下100的情况执行一次, 到底部停止监听让性能高了好多，再也不会布局混乱🤪了
+#      date: 2022/10/25
+#      link: https://blog.anheyu.com/album/
+#    - content: 搜索🔍支持缩略图显示啦（默认获取文章内容的第一张图片）
+#      date: 2024/10/23 08:00:00
+#      from: 安好
+#    - content: 遇见彩虹🌈吃定彩虹
+#      date: 2022/10/23 10:00:00
+#      image:
+#        - https://img02.anheyu.com/adminuploads/1/2022/10/23/6354ea92960ef.webp
+#    - content: ThreeJs API真多丫
+#      date: 2024/10/19
+#    - content: 歌曲推荐
+#      date: 2024/09/25
+#      aplayer:
+#        server: tencent
+#        id: 001FGQba3i10mw
+#    - 参数	备选值/类型	释义
+#    - class_name	String	【可选】标识符，无实际意义，选填
+#    - essay_list	Array	【必选】即刻短文数据列表
+#    - essay_list.content	String	【必选】短文 文字内容
+#    - essay_list.date	Time	【必选】短文发布时间 格式建议为 2022/10/26 08:00:00
+#    - essay_list.image	Array	【可选】短文图片内容, 可填写多张图片
+#    - essay_list.from	String	【可选】短文 来自何处, 当然也可以填任何你想填写的标识
+#    - essay_list.link	String	【可选】外部链接
+#    - essay_list.aplayer	Array	【可选】aplayer 播放器的单曲音乐, 需 aplayer 支持
+#    - essay_list.aplayer.server	String	【essay_list.aplayer 后必选】aplayer 服务商
+#    - essay_list.aplayer.id	String	【essay_list.aplayer 后必选】单曲 id

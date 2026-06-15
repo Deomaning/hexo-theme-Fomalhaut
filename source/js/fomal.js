@@ -54,7 +54,8 @@ function tonav() {
     position = scroll;
   });
   //修复没有弄右键菜单的童鞋无法回顶部的问题
-  document.getElementById("page-name").innerText = document.title.split(" | Fomalhaut🥝")[0];
+  document.getElementById("page-name").innerText = document.title.split(" | 安好 ")[0];
+  document.getElementById("page-name").setAttribute("style", "font-family: 'CascadiaCodePL'");
 }
 
 function scrollToTop() {
@@ -73,7 +74,7 @@ $.ajax({
   type: 'get',
   url: 'https://apis.map.qq.com/ws/location/v1/ip',
   data: {
-    key: '',  // 这里要写你的KEY!!!
+    key: 'AWPBZ-K76CQ-3EM5A-B5S6U-WWGAE-MIFDM',  // 这里要写你的KEY!!!
     output: 'jsonp',
   },
   dataType: 'jsonp',
@@ -99,7 +100,7 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-  let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+  let dist = getDistance(116.335975, 39.976440, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
   let pos = ipLoacation.result.ad_info.nation;
   let ip;
   let posdesc;
@@ -675,7 +676,7 @@ if (document.body.clientWidth > 992) {
         borderRadius: 5 + 'px',
         right: 55.6 + 'px',
         nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
-        hoverMsg: "春天啦~",
+        hoverMsg: "要过年啦~",
         color: "var(--theme-color)",
         during: 500,
         blog_body: "body",
@@ -1119,21 +1120,14 @@ function createtime1() {
   var dnum = Math.floor(days);
 
   var ascll = [
-    `欢迎来到Fomalhaut🥝の小家!`,
+    `欢迎来到控制台!`,
     `Future is now 🍭🍭🍭`,
-    `
-        
-███████  ██████  ███    ███  █████  ██      ██   ██  █████  ██    ██ ████████ 
-██      ██    ██ ████  ████ ██   ██ ██      ██   ██ ██   ██ ██    ██    ██    
-█████   ██    ██ ██ ████ ██ ███████ ██      ███████ ███████ ██    ██    ██    
-██      ██    ██ ██  ██  ██ ██   ██ ██      ██   ██ ██   ██ ██    ██    ██    
-██       ██████  ██      ██ ██   ██ ███████ ██   ██ ██   ██  ██████     ██   
-                                              
-`,
+	`
+	`,
     "小站已经苟活",
     dnum,
-    "天啦!",
-    "©2022 By Fomalhaut",
+    "天啦!😂",
+    "",
   ];
 
   setTimeout(
@@ -1172,7 +1166,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Fomalhaut🥝の小家",
+      "%c ⚡ Powered by Anhao_O %c 你正在访问Anhao_Oの小家",
       "color:white; background-color:#f0ad4e",
       ""
     )
@@ -1282,8 +1276,8 @@ function share_() {
   try {
     // 截取标题
     var title = document.title;
-    var subTitle = title.endsWith("| Fomalhaut🥝") ? title.substring(0, title.length - 14) : title;
-    navigator.clipboard.writeText('Fomalhaut🥝的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+    var subTitle = title.endsWith("| Anhao_O") ? title.substring(0, title.length - 14) : title;
+    navigator.clipboard.writeText('Anhao_O的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
     new Vue({
       data: function () {
         this.$notify({
@@ -2519,18 +2513,18 @@ if (m == 12 && dd == 25) {//圣诞节
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
-if (m == 8 && dd == 11) {//站长生日
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝站长" + (y - 1998).toString() + "岁生日快乐！🥝");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
-if (m == 6 && dd == 30) {//小猫咪生日
-  if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝小猫咪" + (y - 1999).toString() + "岁生日快乐！🐱");
-    sessionStorage.setItem("isPopupWindow", "1");
-  }
-}
+//if (m == 8 && dd == 11) {//站长生日
+ // if (sessionStorage.getItem("isPopupWindow") != "1") {
+  //  Swal.fire("祝站长" + (y - 1998).toString() + "岁生日快乐！🥝");
+   // sessionStorage.setItem("isPopupWindow", "1");
+ // }
+//}
+//if (m == 6 && dd == 30) {//小猫咪生日
+ // if (sessionStorage.getItem("isPopupWindow") != "1") {
+ //   Swal.fire("祝小猫咪" + (y - 1999).toString() + "岁生日快乐！🐱");
+  //  sessionStorage.setItem("isPopupWindow", "1");
+  //}
+//}
 
 //传统节日部分
 
@@ -2789,7 +2783,7 @@ function createtime() {
   var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17); // 距离=秒数*速度 记住转换毫秒
   var unit = (dis / 149600000).toFixed(6);  // 天文单位
   // 网站诞生时间
-  var grt = new Date("08/09/2022 00:00:00");
+  var grt = new Date("08/09/2024 00:00:00");
   var days = (now - grt) / 1e3 / 60 / 60 / 24,
     dnum = Math.floor(days),
     hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
@@ -2804,8 +2798,8 @@ function createtime() {
   let currentTimeHtml = "";
   (currentTimeHtml =
     hnum < 18 && hnum >= 9
-      ? `<img class='boardsign' src='https://lskypro.acozycotage.net/Fomalhaut/badge/F小屋-科研摸鱼中.svg' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
-      : `<img class='boardsign' src='https://lskypro.acozycotage.net/Fomalhaut/badge/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
+      ? `<img class='boardsign' src='https://img.shields.io/badge/%E6%91%B8%E9%B1%BC%E5%B7%A5%E4%BD%9Cing%F0%9F%A5%97%F0%9F%8F%8B%EF%B8%8F-blue?style=social&logo=fandom&logoColor=%23806d9e&logoSize=auto&label=%E5%AE%89%E5%A5%BD&labelColor=%23f1f0ed&color=%23f1f0ed' title='什么时候能够实现财富自由呀~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`
+      : `<img class='boardsign' src='https://img.shields.io/badge/%E6%92%B8%E9%93%81%E5%81%A5%E8%BA%ABing%F0%9F%8F%8B%EF%B8%8F-blue?style=social&logo=fandom&logoColor=%23806d9e&logoSize=auto&label=%E5%AE%89%E5%A5%BD&labelColor=%23f1f0ed&color=%23f1f0ed' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀</div>`),
     document.getElementById("workboard") &&
     (document.getElementById("workboard").innerHTML = currentTimeHtml);
 }
@@ -2857,7 +2851,7 @@ if (window.localStorage.getItem("fpson") == undefined || window.localStorage.get
       } else if (fps <= 45) {
         var kd = `<span style="color:#08b7e4">还不错哦😁</span>`
       } else {
-        var kd = `<span style="color:#39c5bb">十分流畅🤣</span>`
+        var kd = `<span style="color:#39c5bb">十分流畅👍</span>`
       }
       document.getElementById("fps").innerHTML = `FPS:${fps} ${kd}`;
       frame = 0;
@@ -3174,10 +3168,10 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/dm14.webp);
-    --darkmode-bg:url(https://lskypro.acozycotage.net/Fomalhaut/img/yuanshen1.webp);
-    --mobileday-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/snow.webp);
-    --mobilenight-bg: url(https://lskypro.acozycotage.net/Fomalhaut/img/mb8.webp);
+    --default-bg: url(https://s2.loli.net/2024/11/29/ifSO9UJzYCe2tax.jpg);
+    --darkmode-bg:url(https://s2.loli.net/2024/11/29/ifSO9UJzYCe2tax.jpg);
+    --mobileday-bg: url(https://smms.app/image/sSlYkUntMC4B7mP);
+    --mobilenight-bg: url(https://smms.app/image/4HCpZJ1tqmB7kov);
   }`;
 }
 // 切换背景主函数
@@ -3406,7 +3400,11 @@ function createWinbox() {
 <h3>1. 二次元</h3>
 {% folding cyan, 查看二次元背景 %}
 <div class="bgbox">
-<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a>
+<a href="https://smms.app/image/sSlYkUntMC4B7mP"  rel="noopener external nofollowtarget="_blank" class="imgbox"><img src="https://s2.loli.net/2024/10/09/sSlYkUntMC4B7mP.webp" 
+onclick="changeBg('url(https://smms.app/image/Cz5cw37JvBolXTQ)')
+></a>
+
+<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://s2.loli.net/2024/10/09/sSlYkUntMC4B7mP.webp)" class="imgbox" onclick="changeBg('url(https://smms.app/image/Cz5cw37JvBolXTQ)')"></a>
 
 </div>
 {% endfolding %}
@@ -3416,9 +3414,9 @@ function createWinbox() {
 
 {% folding cyan, 查看风景背景 %}
 <div class="bgbox">
-<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/fj1.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/fj1.webp)')"></a>
-
-
+<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://smms.app/image/xOy4HJeKbz6LsaY)" class="imgbox" onclick="changeBg('url(https://smms.app/image/xOy4HJeKbz6LsaY)')"></a>
+<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://smms.app/image/3ihYJuMek2TpKLA)" class="imgbox" onclick="changeBg('url(https://smms.app/image/3ihYJuMek2TpKLA)')"></a>
+<a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://smms.app/image/SGd671WHVY8nLvj)" class="imgbox" onclick="changeBg('url(https://smms.app/image/SGd671WHVY8nLvj)')"></a>
 </div>
 {% endfolding %}
 

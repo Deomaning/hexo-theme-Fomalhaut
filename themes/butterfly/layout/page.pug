@@ -10,10 +10,16 @@ block content
         include includes/page/tags.pug
       when 'link'
         include includes/page/flink.pug
+      when 'games'
+        include includes/page/games.pug
+      when 'essay'
+       include includes/page/essay.pug
       when 'categories'
         include includes/page/categories.pug
       when 'echarts'
         include includes/page/echarts.pug
+      when 'WebsiteNavigation'
+        include includes/page/WebsiteNavigation.pug
       default
         include includes/page/default-page.pug
 

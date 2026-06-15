@@ -1,0 +1,28 @@
+- class_name:
+  description:
+  tip:
+  top_background:
+  buttonText:
+  buttonLink:
+  good_navlists:
+    - title: 美化桌面网站
+      description:
+      webnavigation_list:
+        - name: 哲风壁纸
+          specification: 不需要登录即可下载
+          description: "简约"
+          image: https://s2.loli.net/2024/11/29/osRKPJLZ73lvxbF.jpg
+          link: https://haowallpaper.com/homeView
+        - name: 致美化
+          specification: 精彩的人生就是无止尽的折腾
+          description: "各种美化软件,以及自定义桌面,让桌面变得更加炫酷"
+          image: https://s2.loli.net/2024/11/29/OMgwn4fzEalveC8.png
+          link: https://zhutix.com/
+    - title: 奇迹秀
+      description: 因设计而美丽
+      webnavigation_list:
+        - name: 奇迹秀
+          specification: 有各种破解工具以及使用工具
+          description: 综合型网站
+          image: https://s2.loli.net/2024/11/29/UI4rbDqm3uPxdQc.png
+          link: https://www.qijixiu.com/

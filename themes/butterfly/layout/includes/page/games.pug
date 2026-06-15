@@ -1,0 +1,38 @@
+#games
+    if site.data.games
+        each i in site.data.games
+            .author-content.author-content-item.GamesPage.single(style = `background: url(${i.top_background}) left 37% / cover no-repeat !important;border-radius: 10px;height:21rem`)
+                .card-content
+                    .author-content-item-tips(style='color: white;font-family: cursive;font-size: 30px;height: 40px;')=i.class_name
+                    span.author-content-item-title(style='color: white;font-family: cursive;font-size: 40px;font-weight: 700;')=i.description
+                    .content-bottom(style='color: white;font-family: cursive;font-size: 23px;margin-top:110px')
+                        .tips=i.tip
+                    .banner-button-group(style='margin-left:90%')
+                        a.banner-button(href=i.buttonLink)
+                            i.anzhiyufont.anzhiyu-icon-arrow-circle-right(style='font-size: 1.3rem')
+                            i.fas.fa-circle-right(style='font-size: 1.5rem')
+                            span.banner-button-text=i.buttonText
+                            span.shimmer
+            each item in i.good_games
+                .goodgames-item
+                    h2.goodgames-title= item.title
+                    .goodgames-item-description= item.description
+                    .games-item
+                        .games-item-content
+                            each iten, indey in item.games_list
+                                .games-item-content-item
+                                    .games-item-content-item-cover
+                                        img.games-item-content-item-image(data-lazy-src=url_for(iten.image) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt=iten.name)
+                                    .games-item-content-item-info
+                                        .games-item-content-item-name(onclick=`rm.rightmenuCopyText("${iten.name}");anzhiyu.snackbarShow("${_p('Snackbar.copy_games_name') + " 【" + iten.name + "】"}");` title=iten.name)= iten.name
+                                        .games-item-content-item-specification= iten.specification
+                                        .games-item-content-item-description= iten.description
+                                        .games-item-content-item-toolbar
+                                            if iten.link.includes('https://') || iten.link.includes('http://')
+                                                a.games-item-content-item-link(href= iten.link, target='_blank') 详情
+                                                .bber-reply(onclick="rm.rightMenuCommentText(" + `'${iten.name + " " + iten.specification + " " + iten.description}'` + ")")
+                                                    i.anzhiyufont.anzhiyu-icon-message
+                                            else
+                                                a.games-item-content-item-link(href= iten.link, target='_blank') 评论
+                                                .bber-reply(onclick="rm.rightMenuCommentText(" + `'${iten.name + " " + iten.specification + " " + iten.description}'` + ")")
+                                                    i.anzhiyufont.anzhiyu-icon-message

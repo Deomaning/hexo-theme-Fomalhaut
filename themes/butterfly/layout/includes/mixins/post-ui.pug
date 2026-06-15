@@ -65,7 +65,7 @@
 //-                 a(href=url_for(item.path)).article-meta__tags #[=item.name]
 //-                 if (index < article.tags.data.length - 1)
 //-                   span.article-meta-link #[='•']
-          
+
 //-           mixin countBlockInIndex
 //-             - needLoadCountJs = true
 //-             span.article-meta.comments
@@ -76,7 +76,7 @@
 //-               if block
 //-                 block
 //-               span.article-meta-label= ' ' + _p('card_post_count')
-          
+
 //-           if theme.comments.card_post_count
 //-             case theme.comments.use[0]
 //-               when 'Disqus'
@@ -124,12 +124,12 @@
 //-               .content!= article.description
 //-             else
 //-               - const content = strip_html(article.content)
-//-               - let expert = content.substring(0, theme.index_post_content.length) 
+//-               - let expert = content.substring(0, theme.index_post_content.length)
 //-               - content.length > theme.index_post_content.length ? expert += ' ...' : ''
 //-               .content!= expert
 //-           default
 //-             - const content = strip_html(article.content)
-//-             - let expert = content.substring(0, theme.index_post_content.length) 
+//-             - let expert = content.substring(0, theme.index_post_content.length)
 //-             - content.length > theme.index_post_content.length ? expert += ' ...' : ''
 //-             .content!= expert
 
@@ -158,7 +158,7 @@ mixin postUI(posts)
         .recent-post-info
           a.article-title(href=url_for(link) title=title)
             .article-title-link= title
-          .recent-post-meta                
+          .recent-post-meta
             .article-meta-wrap
               if (is_home() && (article.top || article.sticky > 0))
                 span.article-meta
@@ -166,7 +166,7 @@ mixin postUI(posts)
                   svg.meta_icon(style="width:16px;height:16px;position:relative;top:3px").post-ui-icon
                     use(xlink:href='#icon-tuding')
                   span.sticky= _p('sticky')
-                  span.article-meta-separator  | 
+                  span.article-meta-separator  |
               if (theme.post_meta.page.date_type)
                 span.post-meta-date
                   if (theme.post_meta.page.date_type === 'both')
@@ -175,10 +175,10 @@ mixin postUI(posts)
                       use(xlink:href='#icon-rili')
                     span.article-meta-label=_p('post.created') + " "
                     time.post-meta-date-created(datetime=date_xml(article.date) title=_p('post.created') + ' ' + full_date(article.date))=date(article.date, config.date_format)
-                    span.article-meta-separator  | 
+                    span.article-meta-separator  |
                     //- i.fas.fa-history
                     svg.meta_icon(style="width:13px;height:13px;position:relative;top:2px").post-ui-icon
-                      use(xlink:href='#icon-gengxin1')                    
+                      use(xlink:href='#icon-gengxin1')
                     span.article-meta-label=_p('post.updated') + " "
                     time.post-meta-date-updated(datetime=date_xml(article.updated) title=_p('post.updated') + ' ' + full_date(article.updated))=date(article.updated, config.date_format)
                   else
@@ -191,7 +191,7 @@ mixin postUI(posts)
                     time(datetime=date_xml(article[date_type]) title=date_title + ' ' + full_date(article[date_type]))=date(article[date_type], config.date_format)
               if (theme.post_meta.page.categories && article.categories.data.length > 0)
                 span.article-meta
-                  span.article-meta-separator  | 
+                  span.article-meta-separator  |
                   //- i.fas.fa-inbox
                   svg.meta_icon(style="width:12px;height:12px;position:relative;top:1px").post-ui-icon
                     use(xlink:href='#icon-fenlei')
@@ -201,7 +201,7 @@ mixin postUI(posts)
                       i.fas.fa-angle-right.article-meta-link
               if (theme.post_meta.page.tags && article.tags.data.length > 0)
                 span.article-meta.tags
-                  span.article-meta-separator  | 
+                  span.article-meta-separator  |
                   //- i.fas.fa-tag
                   svg.meta_icon(style="width:13px;height:13px;position:relative;top:2px").post-ui-icon
                     use(xlink:href='#icon-biaoqian')
@@ -209,18 +209,18 @@ mixin postUI(posts)
                     a(href=url_for(item.path)).article-meta__tags #[=item.name]
                     if (index < article.tags.data.length - 1)
                       span.article-meta-link #[=' • ']
-              
+
               mixin countBlockInIndex
                 - needLoadCountJs = true
                 span.article-meta
-                  span.article-meta-separator  | 
+                  span.article-meta-separator  |
                   //- i.fas.fa-comments
                   svg.meta_icon(style="width:13px;height:13px;position:relative;top:2px").post-ui-icon
                     use(xlink:href='#icon-pinglun1')
                   if block
                     block
                   span.article-meta-label= ' ' + _p('card_post_count')
-              
+
               if theme.comments.card_post_count
                 case theme.comments.use[0]
                   when 'Disqus'
@@ -259,7 +259,7 @@ mixin postUI(posts)
                     +countBlockInIndex
                       a(href=url_for(link) + '#post-comment')
                         span.artalk-count(data-page-key=url_for(link))
-                          i.fa-solid.fa-spinner.fa-spin      
+                          i.fa-solid.fa-spinner.fa-spin
         a.article-content(href=url_for(link) title=title)
           //- Display the article introduction on homepage
           case theme.index_post_content.method
@@ -272,14 +272,14 @@ mixin postUI(posts)
                 .article-content-text!= article.description
               else
                 - const content = strip_html(article.content)
-                - let expert = content.substring(0, theme.index_post_content.length) 
+                - let expert = content.substring(0, theme.index_post_content.length)
                 - content.length > theme.index_post_content.length ? expert += ' ...' : ''
                 .article-content-text!= expert
             default
               - const content = strip_html(article.content)
-              - let expert = content.substring(0, theme.index_post_content.length) 
+              - let expert = content.substring(0, theme.index_post_content.length)
               - content.length > theme.index_post_content.length ? expert += ' ...' : ''
-              .article-content-text!= expert      
+              .article-content-text!= expert
         .recent-post-arrow
 
     if theme.ad && theme.ad.index

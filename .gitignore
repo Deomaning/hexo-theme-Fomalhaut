@@ -9,3 +9,16 @@ public/
 .idea
 themes/butterfly/.git
 package-lock.json
+
+# 个人文件不进入版本控制
+source/.obsidian/
+source/_diary/
+source/Excalidraw/
+source/images/
+source/css/
+source/js/
+source/ai-newstoday.zip
+source/未命名.md
+urls.txt
+link.js
+netlify.toml

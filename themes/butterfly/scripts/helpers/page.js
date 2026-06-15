@@ -96,3 +96,4 @@ hexo.extend.helper.register('findArchivesTitle', function (page, menu, date) {
 
   return loop(menu) || defaultTitle
 })
+
