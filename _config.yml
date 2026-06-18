@@ -34,7 +34,9 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 # 指定不渲染某些页面
-skip_render: /sorce/_posts/Demo
+skip_render:
+  - sorce/_posts/Demo
+  - _knowledge/**
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
@@ -171,8 +173,8 @@ swiper:
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
   swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
-  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
+  custom_css: /css/swiper-custom.css # 本地自定义轮播图样式（修复布局和UI）
+  custom_js: /lib/swiper_init.js # swiper初始化方法（本地修改版，修复懒加载问题）
 
 # 本地搜索
 search:
